@@ -1,0 +1,17 @@
+{
+    "name": "example-api-testing",
+    "version": "1.0.0",
+    "description": "Example API Testing",
+    "author": "Rifky Ali",
+    "dependencies": {
+        "body-parser": "^1.17.1",
+        "chai": "^3.5.0",
+        "mocha": "^9.1.1",
+        "mocha-jenkins-reporter": "^0.4.7",
+        "supertest": "^3.0.0"
+    },
+    "scripts": {
+        "prestart": "npm install;",
+        "start": "JUNIT_REPORT_PATH=test-result/result.xml JUNIT_REPORT_STACK=1 mocha --timeout 25000 --colors --reporter mocha-jenkins-reporter || true"
+    }
+}
